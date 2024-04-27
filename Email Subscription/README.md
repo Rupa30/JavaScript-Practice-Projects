@@ -12,5 +12,5 @@ This is a simple landing page for email subscription. Users can input their emai
 
 ## The GitHub link which you can refer to 
 
-[text](https://github.com/jamiewilson/form-to-google-sheets)
+[form-to-google-sheets](https://github.com/jamiewilson/form-to-google-sheets)
 

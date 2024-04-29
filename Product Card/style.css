@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(248, 206, 253);
+}
+
+.product {
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+}
+
+.gallery {
+    flex-basis: 47%;
+    background-color: #333;
+    transform: scale(1.08);
+    position: relative;
+}
+
+.gallery img {
+    width: 100%;
+    display: block;
+    padding-top: 100px;
+}
+
+.details {
+    flex-basis: 53%;
+    background-color: #fff;
+    color: #000;
+    padding: 40px;
+    padding-left: 60px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.details h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.details h3 {
+    color: orange;
+    margin-bottom: 20px;
+}
+
+.size-select {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.size-select p {
+    display: inline-block;
+    margin-right: 10px;
+    width: 70px;
+}
+
+.size-select input:checked+span {
+    color: orange;
+    font-weight: 600;
+}
+
+.size-select input {
+    display: none;
+}
+
+.size-select span {
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.color-select {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.color-select p {
+    width: 75px;
+    margin-right: 10px;
+}
+
+.color-select span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.color-1 {
+    background-color: red;
+}
+
+.color-2 {
+    background-color: blue;
+}
+
+.color-3 {
+    background-color: black;
+}
+
+.color-4 {
+    background-color: brown;
+}
+
+.color-select input {
+    display: none;
+}
+
+.color-select input:checked+span {
+    box-shadow: 0 0 0 4px #fff, 0 0 0 5px #000;
+    transform: scale(0.7);
+}
+
+.quantity-select {
+    margin-top: 30px;
+}
+
+.quantity-select p {
+    width: 75px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.quantity-select input {
+    width: 50px;
+    padding: 2px 2px 2px 15px;
+    background: #eee;
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+}
+
+form button {
+    background-color: blue;
+    color: #fff;
+    padding: 15px;
+    outline: 0;
+    border: 0;
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 15px;
+    font-size: 18px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+}
+
+.btn {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    background-color: #818181;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color: blue;
+}

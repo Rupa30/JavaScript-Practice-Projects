@@ -79,7 +79,7 @@ body {
     height: 440px;
     display: flex;
     gap: 20px;
-    /* margin-bottom: 50px; */
+    margin-bottom: 80px;
     overflow-y: auto;
     flex-direction: column;
 }
@@ -140,7 +140,7 @@ body {
     width: 6px;
     background: #5955e7;
     border-radius: 50%;
-    /* animation: dotPulse 1.8s ease-in-out infinite; */
+    animation: dotPulse 1.8s ease-in-out infinite;
 }
 
 .chatbot-body .bot-message .thinking-indicator .dot:nth-child(1) {

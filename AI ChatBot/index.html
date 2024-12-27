@@ -50,9 +50,13 @@
                     <button class="material-symbols-outlined">
                         sentiment_satisfied
                     </button>
-                    <button class="material-symbols-outlined">
-                        attach_file
-                    </button>
+                    <div class="file-upload-wrapper">
+                        <input type="file" accept="image/*, .pdf" id="file-input" hidden />
+                        <img src="#">
+                        <button id="file-upload" class="material-symbols-outlined" type="button">attach_file
+                            <button id="file-cancel" class="material-symbols-outlined" type="button">close
+                            </button>
+                    </div>
                     <button id="send-message" class="material-symbols-outlined">
                         arrow_upward
                     </button>

@@ -54,7 +54,7 @@ body {
     color: #fff;
     font-weight: 600;
     font-size: 1.31rem;
-} 
+}
 
 .chatbot-header #close-chatbot {
     border: none;
@@ -82,6 +82,8 @@ body {
     margin-bottom: 80px;
     overflow-y: auto;
     flex-direction: column;
+    scrollbar-width: thin;
+    scrollbar-color: #ccccf5 transparent;
 }
 
 .chatbot-body .message {
@@ -129,6 +131,12 @@ body {
     border-radius: 10px 10px 2px 10px;
 }
 
+.chatbot-body .user-message .attachment {
+    width: 50%;
+    margin-top: -7px;
+    border-radius: 13px 3px 13px 13px;
+}
+
 .chatbot-body .bot-message .thinking-indicator {
     display: flex;
     gap: 3px;
@@ -146,9 +154,11 @@ body {
 .chatbot-body .bot-message .thinking-indicator .dot:nth-child(1) {
     animation-delay: 0.2s;
 }
+
 .chatbot-body .bot-message .thinking-indicator .dot:nth-child(2) {
     animation-delay: 0.3s;
 }
+
 .chatbot-body .bot-message .thinking-indicator .dot:nth-child(3) {
     animation-delay: 0.4s;
 }
@@ -157,10 +167,12 @@ body {
     0%, 44% {
         transform: translateY(0);
     }
+
     28% {
         transform: translateY(-4px);
         opacity: 0.4;
     }
+
     44% {
         opacity: 0.2;
     }
@@ -211,7 +223,7 @@ body {
     display: none;
 }
 
-.chat-form .message-input:valid~.chat-controls #send-message{
+.chat-form .message-input:valid~.chat-controls #send-message {
     display: block;
 }
 
@@ -235,4 +247,37 @@ body {
 .chat-form .chat-controls button:hover {
     background-color: #706DB0;
     color: #fff;
+}
+
+.chat-form .file-upload-wrapper {
+    height: 35px;
+    width: 35px;
+    position: relative;
+}
+
+.chat-form .file-upload-wrapper :where(img, button) {
+    position: absolute;
+}
+
+.chat-form .file-upload-wrapper img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.chat-form .file-upload-wrapper #file-cancel {
+    color: #ff0000;
+    background: #fff;
+}
+
+.chat-form .file-upload-wrapper :where(img, #file-cancel),
+.chat-form .file-upload-wrapper.file-uploaded #file-upload {
+    display: none;
+}
+
+.chat-form .file-upload-wrapper.file-uploaded img,
+.chat-form .file-upload-wrapper.file-uploaded:hover #file-cancel {
+    display: block;
 }

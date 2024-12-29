@@ -16,13 +16,64 @@ body {
     background-image: linear-gradient(to top, #9795f0 0%, #fbc8d4 100%);
 }
 
+#chatbot-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 35px;
+    border: none;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #5955e7;
+    transition: all 0.2s ease;
+}
+ 
+body.show-chatbot #chatbot-toggle {
+    transform: rotate(90deg);
+}
+
+#chatbot-toggle span {
+    color: #fff;
+    position: absolute;
+}
+
+body.show-chatbot #chatbot-toggle span:first-child,
+#chatbot-toggle span:last-child {
+    opacity: 0;
+}
+
+body.show-chatbot #chatbot-toggle span:last-child {
+    opacity: 1;
+}
+
+#chatbot-toggle span:last-child {
+    opacity: 0;
+}
+
 .chatbot-popup {
-    position: relative;
+    position: fixed;
+    right: 95px;
+    /* bottom: 30px; */
     width: 420px;
     overflow: hidden;
     border-radius: 15px;
+    opacity: 0;
+    transform: scale(0.2);
+    transform-origin: bottom right;
+    pointer-events: none;
     background-color: #fff;
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease;
+}
+
+body.show-chatbot .chatbot-popup {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
 }
 
 .chatbot-header {
@@ -188,6 +239,7 @@ body {
 
 .chatbot-footer .chat-form {
     display: flex;
+    position: relative;
     align-items: center;
     background-color: #fff;
     border-radius: 32px;
@@ -201,12 +253,20 @@ body {
 .chat-form .message-input {
     border: none;
     outline: none;
-    height: 45px;
+    height: 47px;
     width: 100%;
+    max-height: 180px;
+    white-space: pre-line;
     resize: none;
-    padding: 10px 0 13px 18px;
+    padding: 14px 0 12px 18px;
     font-size: 0.9rem;
     border-radius: inherit;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.chat-form .message-input:hover {
+    scrollbar-color: #ccccf5 transparent;
 }
 
 .chat-form .chat-controls {
@@ -215,6 +275,7 @@ body {
     align-items: center;
     padding-right: 7px;
     height: 45px;
+    gap: 3px;
 }
 
 .chat-form .chat-controls #send-message {
@@ -281,3 +342,19 @@ body {
 .chat-form .file-upload-wrapper.file-uploaded:hover #file-cancel {
     display: block;
 }
+
+em-emoji-picker {
+    position: absolute;
+    left: 50%;
+    top: -337px;
+    width: 100%;
+    max-width: 350px;
+    max-height: 330px;
+    visibility: hidden;
+    transform: translateX(-50%);
+}
+
+body.show-emoji-picker em-emoji-picker {
+    visibility: visible;
+}
+

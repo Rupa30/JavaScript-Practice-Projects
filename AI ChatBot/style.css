@@ -31,7 +31,7 @@ body {
     background-color: #5955e7;
     transition: all 0.2s ease;
 }
- 
+
 body.show-chatbot #chatbot-toggle {
     transform: rotate(90deg);
 }
@@ -358,3 +358,34 @@ body.show-emoji-picker em-emoji-picker {
     visibility: visible;
 }
 
+@media (max-width: 520px) {
+    #chatbot-toggle {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .chatbot-popup {
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .chatbot-popup .chatbot-header {
+        padding: 12px 15px;
+    }
+
+    .chatbot-body {
+        height: calc(90% - 55px);
+        padding: 25px 15px;
+    }
+
+    .chatbot-footer {
+        padding: 10px 15px 15px;
+    }
+
+    .chat-form .file-upload-wrapper.file-uploaded #file-cancel {
+        opacity: 0;
+    }
+}

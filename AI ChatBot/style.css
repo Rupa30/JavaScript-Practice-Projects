@@ -385,7 +385,7 @@ body.show-emoji-picker em-emoji-picker {
         padding: 10px 15px 15px;
     }
 
-    .chat-form .file-upload-wrapper.file-uploaded #file-cancel {
+    .chat-form .file-upload-wrapper.file-upload #file-cancel {
         opacity: 0;
     }
 }
